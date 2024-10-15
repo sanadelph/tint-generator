@@ -1,38 +1,84 @@
-.App {
+.container{
+  padding: 3rem 2rem;
+}
+h1{
+  font-size: 2.5rem;
+}
+form{
+  display: flex;
+  gap:2rem;
+  margin: 1rem auto;
+}
+input{
+  background: transparent;
+  border: solid 2px rgba(16, 13, 13, 0.179);
+  border-radius: 0.25rem;
+  display: block;
+  outline: 0;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  width: 30%;
+}
+input:focus{
+  border-color: #ffe4b4;
+}
+.error{
+  border-color: rgb(215, 0, 0);
+}
+.btn{
+  background-color: #282c34;
+  padding: .2rem 2rem;
+  color: #fff;
+  border: none;
+}
+.btn:hover{
+  background-color: #fff;
+  color:#282c34;
+  box-shadow: 1px 1px 10px #282c346a;
+  cursor: pointer;
+}
+.colors{
+  display: grid; 
+  grid-template-columns: repeat(8,1fr); 
+  grid-template-rows: 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  width: 70rem;
+  height:20rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 1200px) {
+  .colors{
+    grid-template-columns: repeat(5,1fr); 
+    grid-template-rows: 1fr 1fr 1fr; 
+    width: 50rem;
+    height:15rem;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 979px) {
+  .colors{
+    grid-template-columns: repeat(4,1fr); 
+    grid-template-rows: 1fr 1fr 1fr; 
+    width: 40rem;
+    height:12rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width: 767px) {
+  .colors{
+    grid-template-columns: repeat(3,1fr); 
+    grid-template-rows: 1fr 1fr 1fr; 
+    width: 25rem;
+    height:10rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .colors{
+    grid-template-columns: repeat(3,1fr); 
+    grid-template-rows: 1fr 1fr 1fr; 
+    width: 20rem;
+    height:10rem;
+  }
+  input{
+    width:50%;
   }
 }
